@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG', true),
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY', 'SomeRandomString'),
+	'key' => env('APP_KEY', 'jvklj1n23ljuhn1l'),
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -109,7 +109,6 @@ return [
 	*/
 
 	'providers' => [
-
 		/*
 		 * Laravel Framework Service Providers...
 		 */
@@ -136,6 +135,9 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
+
+        'Barryvdh\Debugbar\ServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		/*
 		 * Application Service Providers...
 		 */
@@ -145,7 +147,6 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
-		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
 	],
 
@@ -161,6 +162,7 @@ return [
 	*/
 
 	'aliases' => [
+
 
 		'App'       => 'Illuminate\Support\Facades\App',
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
@@ -194,6 +196,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+        'Debugbar' => 'Barryvdh\Debugbar\Facade'
+
 
 	],
 
