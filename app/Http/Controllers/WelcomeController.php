@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\User;
+use App\UsersGroup;
 
 class WelcomeController extends Controller {
 
@@ -32,7 +33,9 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-        debug(User::all());
+        $user = User::find(1)->group()->where('id', '=', 2)->first();
+
+        debug($user);
 		return view('welcome');
 	}
 
