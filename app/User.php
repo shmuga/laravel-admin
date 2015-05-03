@@ -9,7 +9,6 @@ class User extends Model{
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
 
     public function group()
     {
