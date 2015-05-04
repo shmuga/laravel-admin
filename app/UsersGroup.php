@@ -9,4 +9,9 @@ class UsersGroup extends Model {
         return $this->hasMany('App\User','users_group_id');
     }
 
+    public  function  funcs()
+    {
+        return $this->belongsToMany('App\Func');
+    }
+
 }

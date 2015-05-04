@@ -9,4 +9,9 @@ class Func extends Model {
         return $this->belongsTo('App\Module','id');
     }
 
+    public  function groups()
+    {
+        return $this->belongsToMany('App\UsersGroup');
+    }
+
 }
