@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class IndexController extends Controller {
 
     public function index(){
-        echo 'index';
+        return view('admin.index');
     }
 
     public function login(){
