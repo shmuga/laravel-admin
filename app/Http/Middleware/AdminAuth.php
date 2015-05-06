@@ -28,9 +28,9 @@ class AdminAuth {
 	{
         $adminId = Session::get('admin');
         if ($this->_excludeRoute($request)){
-            $path = $request->path();
-            $pathArr = explode('/',$path);
-            $module = Module::where('name', '=', $pathArr[1])->first();
+//            $path = $request->path();
+//            $pathArr = explode('/',$path);
+//            $module = Module::where('name', '=', $pathArr[1])->first();
         }
 
 
